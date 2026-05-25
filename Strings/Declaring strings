@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    
+
+    // method 1: using double quotes and let the compiler add the null terminator
+    char x[] = "Hello";
+    // method 2: using single quotes and explicitly adding the null terminator
+    char y[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    // method 3: using double quotes and specifying the size of the array
+    char z[6] = "Hello";
+    // method 4: using single quotes, specifying the size of the array, and explicitly adding the null terminator
+    char w[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    printf("%s\n", x);
+    printf("%s\n", y);
+    printf("%s\n", z);
+    printf("%s\n", w);
+    return 0;
+}
