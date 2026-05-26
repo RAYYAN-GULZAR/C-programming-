@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+// String functions
+    char str1[100] = "Hello";
+    char str2[100] = "World";
+
+    // Concatenation
+    strcat(str1, " ");
+    strcat(str1, str2);
+    printf("Concatenated String: %s\n", str1);
+
+    // Length
+    printf("Length of str1: %zu\n", strlen(str1));
+
+    // Copy
+    char str3[100];
+    strcpy(str3, str1);
+    printf("Copied String: %s\n", str3);
+
+    // Compare
+    if (strcmp(str1, str3) == 0) {
+        printf("str1 and str3 are equal.\n");
+    } else {
+        printf("str1 and str3 are not equal.\n");
+    }
+    
+    // reverse
+    char str4[100];
+    strcpy(str4, str1);
+    strrev(str4);
+    printf("Reversed String: %s\n", str4);
+
+    return 0;
+}
