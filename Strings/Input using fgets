@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+// input strings using fgets() function
+    
+    char name[100];
+    printf("Enter your name: ");
+    fgets(name, 100, stdin);
+    name [strcspn(name, "\n")] = '\0'; // Remove the newline character from the end of the string
+    printf("Hello, %s", name);
+return 0;
+}
