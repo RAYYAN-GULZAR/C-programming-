@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+char x[200];
+printf("Enter your name: ");
+scanf("%s", x); // No & needed. Also string can only be single word
+printf("%s", x);
+return 0;
+}
