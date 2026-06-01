@@ -1,6 +1,6 @@
 # include <stdio.h>
 
-int prime_factors(int n)
+void prime_factors(int n)
 {
 
     int count = 0;
