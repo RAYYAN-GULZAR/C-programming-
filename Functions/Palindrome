@@ -1,0 +1,46 @@
+# include <stdio.h>
+
+void palindrome(int n)
+{
+    int x, rev = 0, m = n;
+
+    while(n>0 )
+    {
+        x = n % 10;
+        n = n / 10;
+        rev = rev * 10 + x;
+    }
+
+    if(m==rev)
+        printf("Palindrome\n");
+    else
+        printf("Not a palindrome\n");
+}
+
+
+
+int main()
+{
+    while(1)
+    {int x;
+
+    int n;
+    printf("\nEnter a number: ");
+    scanf("%d", &n);
+
+    palindrome(n);
+    printf("\n Press 1 to continue and 0 to exit: ");
+    scanf("%d", &x);
+    if(x == 0)
+    {
+        printf("Goodbye");
+        return 0;
+    }
+
+
+
+
+}
+
+
+}
