@@ -1,0 +1,48 @@
+# include <stdio.h>
+
+int largest_digit(int n)
+{
+    int max = 0,x;
+    while(n>0)
+    {
+        x = n % 10;
+        n = n / 10;
+        if(x>max)
+            max = x;
+
+    }
+    return max;
+
+}
+
+
+
+int main()
+{
+    while(1)
+    {int x;
+
+    int n;
+    printf("\nEnter a number: ");
+    scanf("%d", &n);
+
+    printf("The Largest digit of %d is %d", n, largest_digit(n));
+    printf("\n Press 1 to continue and 0 to exit: ");
+    scanf("%d", &x);
+    if(x == 0)
+    {
+        printf("Goodbye");
+        return 0;
+    }
+
+
+
+
+}
+
+
+}
+
+
+
+
