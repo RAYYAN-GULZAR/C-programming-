@@ -1,0 +1,36 @@
+#include <stdio.h>
+/* A perfect number is a positive 
+integer that is equal to the sum of its proper divisors . Proper 
+divisors of a number are all the divisors of that number except 
+the number itself. For example, the proper divisors of 6 are 1, 2,
+and 3, and their sum is 6. Therefore, 6 is a perfect number. 
+*/
+
+
+int  perf_num(int n);
+
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if(perf_num(n)== n)
+
+        printf("%d is a perfect number.",n);
+    else
+        printf("%d is not a perfect number ",n);
+    return 0;
+
+
+}
+int perf_num(int n)
+{
+    int sum = 0;
+    for(int i = 1;i<n;i++)
+    {
+        if(n % i == 0)
+           sum += i;
+    }
+    return sum;
+
+}
