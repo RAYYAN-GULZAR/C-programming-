@@ -1,0 +1,35 @@
+// Pointers and arrays in C
+#include <stdio.h>
+
+int main() {
+    // Declare an array of integers
+    int arr[5] = {10, 20, 30, 40, 50};
+
+    // Declare a pointer to an integer
+    int *ptr;
+
+    // Point the pointer to the first element of the array
+    ptr = arr;
+
+    // Print the elements of the array using the pointer
+    printf("Array elements using pointer:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i)); // Accessing array elements using pointer arithmetic
+    }
+    printf("\n");
+
+    // Print the elements using array name (which decays to a pointer)
+    printf("Array elements using array name:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(arr + i)); // Accessing array elements using pointer arithmetic
+    }
+    printf("\n");
+    // print elements using incerementing the pointer
+    printf("Array elements using incrementing the pointer:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *ptr); // Accessing array elements using pointer dereferencing
+        ptr++; // Increment the pointer to point to the next element
+    }
+
+    return 0;
+}
