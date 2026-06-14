@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int swap1(int a,int b);
+int swap2(int *a,int *b);
+int main()
+{
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d %d",&a,&b);
+
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+    swap1(a,b);
+    printf("After swapping using call by value: a = %d, b = %d\n", a, b);
+    swap2(&a,&b);
+    printf("After swapping using call by reference: a = %d, b = %d\n", a, b);
+    return 0;
+}
+int swap1(int a,int b)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+    return 0;
+}
+int swap2(int *a,int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    return 0;
+}
