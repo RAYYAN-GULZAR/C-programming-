@@ -90,8 +90,12 @@ int main()
                 case 8: skew(n, m, arr); break;
                 case 9: identity(n, m, arr); break;
                 case 10:
-                    printf("Enter the power to which you want to raise the matrix: ");
-                    scanf("%d", &y);
+                    do {
+                        printf("Enter the power to which you want to raise the matrix (must be >= 0): ");
+                        scanf("%d", &y);
+                        if (y < 0)
+                            printf("Error: Power must be non-negative.\n");
+                    } while (y < 0);
                     power(y, n, m, arr);
                     break;
                 default:
