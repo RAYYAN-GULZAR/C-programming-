@@ -105,7 +105,7 @@ void symmetric(int n, int m, int arr[n][m])
         for(int i = 0; i < n; i++)
         {
             if(flag == 1) break;
-            for(int j = 0; j < m; j++)
+            for(int j = i; j < n; j++)
             {
                 if(arr[i][j] != arr[j][i])
                 {
@@ -130,7 +130,7 @@ void skew(int n, int m, int arr[n][m])
         for(int i = 0; i < n; i++)
         {
             if(flag == 1) break;
-            for(int j = 0; j < m; j++)
+            for(int j = i; j < n; j++)
             {
                 if(arr[i][j] != -arr[j][i])
                 {
@@ -274,6 +274,23 @@ void power(int k, int n, int m, int arr[n][m])
     if (k < 0)
     {
         printf("Negative powers are not supported. Please enter a positive power.\n");
+        return;
+    }
+
+    if (k == 0)
+    {
+        printf("The matrix raised to the power %d is:\n", k);
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {
+                if(i == j)
+                    printf("%d\t", 1);
+                else
+                    printf("%d\t", 0);
+            }
+            printf("\n");
+        }
         return;
     }
 
