@@ -43,12 +43,12 @@ void determinant(int n, int m, int arr[n][m])
     else
     {
         if(m == 1 && n == 1)
-            printf("%d\n", arr[0][0]);
+            printf("The determinant of the given matrix is: %d\n", arr[0][0]);
         else if(m == 2 && n == 2)
-            printf("%d\n", arr[0][0]*arr[1][1]-arr[0][1]*arr[1][0]);
+            printf("The determinant of the given matrix is: %d\n", arr[0][0]*arr[1][1]-arr[0][1]*arr[1][0]);
         else if(m == 3 && n == 3)
         {
-            printf("The determinant of given matrix is %d\n", arr[0][0]*(arr[1][1]*arr[2][2]-arr[1][2]*arr[2][1]) - arr[0][1]*(arr[1][0]*arr[2][2]-arr[1][2]*arr[2][0]) + arr[0][2]*(arr[1][0]*arr[2][1]-arr[1][1]*arr[2][0]));
+            printf("The determinant of the given matrix is: %d\n", arr[0][0]*(arr[1][1]*arr[2][2]-arr[1][2]*arr[2][1]) - arr[0][1]*(arr[1][0]*arr[2][2]-arr[1][2]*arr[2][0]) + arr[0][2]*(arr[1][0]*arr[2][1]-arr[1][1]*arr[2][0]));
         }
     }
 }
