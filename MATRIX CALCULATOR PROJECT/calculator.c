@@ -24,11 +24,22 @@ void trace(int n, int m, int arr[n][m])
 
 void transpose(int n, int m, int arr[n][m])
 {
-    for (int j = 0; j < m; j++)
+    int trans[m][n];
+    
+    for (int i = 0; i < n; i++)
     {
-        for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
         {
-            printf("%d\t", arr[i][j]);
+            trans[j][i] = arr[i][j];
+        }
+    }
+    
+    printf("The transpose of the given matrix is:\n");
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%d\t", trans[i][j]);
         }
         printf("\n");
     }
@@ -65,7 +76,7 @@ void scalar(int x, int n, int m, int arr[n][m])
 
 void row_sum(int y, int n, int m, int arr[n][m])
 {
-    int index = y - 1; // Adjusts to 0-based indexing for the user
+    int index = y - 1;
     if (index < n && index >= 0)
     {
         int sum = 0;
@@ -81,7 +92,7 @@ void row_sum(int y, int n, int m, int arr[n][m])
 
 void column_sum(int y, int n, int m, int arr[n][m])
 {
-    int index = y - 1; // Adjusts to 0-based indexing for the user
+    int index = y - 1;
     if (index < m && index >= 0)
     {
         int sum = 0;
