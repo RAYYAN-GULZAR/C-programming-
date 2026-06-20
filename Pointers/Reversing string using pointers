@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+void reverse(int size, char *ptr) 
+{
+    char *left = ptr;               
+    char *right = ptr + size - 1;   
+
+    
+    while(right > left)
+    {
+        char temp = *right;
+        *right = *left;
+        *left = temp;
+        
+        right--; 
+        left++;  
+    }
+    
+
+    for(int i = 0; i < size; i++)
+    {
+        printf("%c", *ptr);
+        ptr++;
+    }
+    printf("\n");
+}
+
+int main()
+{
+    char x[100];
+    printf("Enter your name: ");
+    fgets(x, 100, stdin);
+    
+    int count = 0;
+    while(x[count] != '\n')
+    {
+        count++;
+    }
+    
+    reverse(count, x);
+    return 0;
+}
