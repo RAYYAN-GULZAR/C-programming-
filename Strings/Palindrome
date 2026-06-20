@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <ctype.h>
+int main()
+{
+    char x[100];
+    printf("Enter your name: ");
+    fgets(x,100,stdin);
+    int count = 0,i = 0;
+    while(x[i] != '\n')
+    {
+        count++;
+        i++;
+    }
+    int left = 0,right = count -1,flag = 0;
+    while(right>left)
+    {
+        if(x[right] != x[left]) 
+        {
+            flag = 1;
+            break;
+        }
+        if(flag == 0)
+      
+    }
+    printf("%s", x);
+    return 0;
+}
