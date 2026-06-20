@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <ctype.h>
+int main()
+{
+    char x[100];
+    printf("Enter your name: ");
+    fgets(x,100,stdin);
+    int count = 0,i = 0;
+    /* fgets() stores the newline character when the user presses Enter.
+       Stop counting at '\n' so the loop measures the entered text only,
+       not the trailing newline before the terminating '\0'. 
+       eg if input is "Alice\n", it will be stored as 'A' 'l' 'i' 'c' 'e' '\n' '\0' */
+    while(x[i] != '\n')
+    {
+        count++;
+        i++;
+    }
+    for(i = 0;i<count;i++)
+    {
+      x[i] = toupper(x[i]);
+    }
+    printf("%s", x);
+    return 0;
+}
