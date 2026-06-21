@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+// A structure is just a user-defined data type that can hold multiple values of different types.
+// Blueprint of a structure is called structure definition. It is used to define the structure and its members.
+struct student{
+    int roll_no;
+    float marks;
+    char name[100];    
+};   // Semicolon is required after the closing brace of a struct definition
+int main()
+{
+    struct student s1; // struct student is the data type and s1 is the variable of that data type.
+    s1.roll_no = 1;
+    s1.marks = 85.5;
+    strcpy(s1.name, "John Doe");
+    
+    printf("Roll No: %d\n", s1.roll_no);
+    printf("Marks: %.2f\n", s1.marks);
+    printf("Name: %s\n", s1.name);
+
+    struct student s2 = {2, 90.0, "Jane Smith"}; // Initializing a structure variable at the time of declaration
+    printf("Roll No: %d\n", s2.roll_no);
+    printf("Marks: %.2f\n", s2.marks);
+    printf("Name: %s\n", s2.name);
+    return 0;
+}
