@@ -1,0 +1,31 @@
+// Pointer to a structure in c
+#include <stdio.h>
+
+struct car {
+    char name[20];
+    int year;
+    float price;
+};
+int main() {
+    struct car myCar = {"Toyota", 2020, 25000.50};
+    struct car *ptrCar = &myCar;
+
+    printf("%p", (void *)ptrCar);
+    printf("\n%p", (void *)&myCar.name);
+    // Above 2 lines display the same starting address of myCar.
+    // myCar.name is an array whose first character is stored at the start of the struct.
+    printf("\n%p", (void *)&myCar.year);
+    printf("\n%p", (void *)&myCar.price);
+   
+
+    // Access members through the struct pointer
+    printf("\n\n%s", ptrCar->name);
+    printf("\n%d", ptrCar->year);
+    printf("\n%.2f", ptrCar->price);
+
+    // Dereferencing can also be done using the * operator
+    printf("\n\n%s", (*ptrCar).name);
+    printf("\n%d", (*ptrCar).year);
+    printf("\n%.2f", (*ptrCar).price);
+    return 0;
+}
