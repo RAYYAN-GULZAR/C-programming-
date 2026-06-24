@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int num,x =1 ;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    printf("Enter the terms: ");
+    int power;
+    scanf("%d", &power);
+
+    printf("%d ", num);
+
+    for(int i = 1;i<power;i++)
+    {
+       x = num * num;
+       printf("%d ",x);
+       num = x;
+       
+
+    }
+
+
+    return 0;
+}
