@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+
+int main()
+{
+    // first term of the geometric progression (GP)
+    int first, ratio;
+    printf("Enter the 1st term of GP: ");
+    scanf("%d", &first);
+
+    // common ratio between successive terms
+    printf("Enter the common ratio: ");
+    scanf("%d", &ratio);
+
+    // number of terms to print
+    int terms;
+    printf("Enter no of terms: ");
+    scanf("%d", &terms);
+
+    // Generate each GP term using repeated multiplication.
+    // term i = first * ratio^i where i starts from 0.
+    for (int i = 0; i < terms; i++)
+    {
+        int power = 1;
+
+        // Inner loop because GP(n) = first * ratio^n, and we need to compute ratio^i.
+        for (int j = 0; j < i; j++)
+        {
+            power *= ratio;
+        }
+
+        // Print the i-th term of the GP.
+        printf("%d ", first * power);
+    }
+
+    printf("\n");
+    return 0;
+}
