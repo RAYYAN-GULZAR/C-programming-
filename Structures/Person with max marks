@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+struct student{
+    char name[100];
+    int rollno;
+    float marks;
+};
+int main()
+{
+    struct student s1[5]={
+        {"Alice", 1, 85.5},
+        {"Bob", 2, 90.0},
+        {"Charlie", 3, 78.5},
+        {"David", 4, 92.0},
+        {"Eve", 5, 88.5}
+    };
+    float max = s1[0].marks;
+    for(int i = 1;i<5;i++)
+    {
+        if(s1[i].marks>max)
+        {
+            max = s1[i].marks;
+            int index = i;
+        }
+
+
+    }
+    printf("The maximum marks is: %.2f\n by %s whose roll number is %d", max, s1[index].name, s1[index].rollno);
+
+}
